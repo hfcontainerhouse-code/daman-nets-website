@@ -176,9 +176,21 @@
         /* Products */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             margin-top: 50px;
+        }
+
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .product-card {
@@ -379,7 +391,7 @@
             <div class="products-grid">
                 <!-- Interior Loft Nets -->
                 <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://sc01.alicdn.com/kf/Hed2dbc33650f4b3c9ef77c3754a9a6b7Z.png');"></div>
+                    <div class="product-img" style="background-image: url('https://sc01.alicdn.com/kf/H1df0efea600746c1b1888939aeef6f00T.png');"></div>
                     <div class="product-info">
                         <h3>Interior Loft Nets</h3>
                         <p>Safe and stylish hammock nets for mezzanines and relaxation spaces. UV resistant and certified comfort.</p>
@@ -389,7 +401,7 @@
 
                 <!-- Outer Net -->
                 <div class="product-card">
-                    <div class="product-img" style="background-image: url('https://sc01.alicdn.com/kf/Ha810feb2d3af41158aa700581a4d5716D.jpg');"></div>
+                    <div class="product-img" style="background-image: url('https://sc01.alicdn.com/kf/He0551426868443d9a56732e872978dfcL.jpg');"></div>
                     <div class="product-info">
                         <h3>Outer Net</h3>
                         <p>Our UV- and weather-resistant nets for terraces, balconies, swimming pools or overhead areas turn your outdoor spaces into secure, original relaxation areas.</p>
