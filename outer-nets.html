@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,56 +43,71 @@
         img { max-width: 100%; display: block; border-radius: 8px; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 60px 0; }
-        .btn { display: inline-block; padding: 12px 30px; border-radius: 5px; font-weight: 600; cursor: pointer; transition: var(--transition); }
-        .btn-primary { background-color: var(--accent-color); color: var(--white); }
-        .btn-primary:hover { background-color: #dd6b20; transform: translateY(-2px); }
-
-        /* Header */
-        header { background: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        nav { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 800; color: var(--primary-color); }
+        .section-padding { padding: 80px 0; }
+        
+        /* Breadcrumbs */
+        .breadcrumbs { padding: 20px 0; font-size: 14px; color: var(--text-light); }
+        .breadcrumbs a { color: var(--secondary-color); }
+        .breadcrumbs span { margin: 0 10px; }
 
         /* Hero */
-        .page-hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://feelnets.com/wp-content/uploads/2025/10/feelnets-filets-exterieur-banniere.webp'); background-size: cover; background-position: center; padding: 100px 0; text-align: center; color: white; }
-        .page-hero h1 { font-size: 48px; margin-bottom: 20px; }
-        .page-hero p { font-size: 20px; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+        .page-hero { padding: 40px 0; background: var(--bg-light); }
+        .page-hero h1 { font-size: 48px; color: var(--primary-color); font-weight: 800; margin-bottom: 10px; }
 
-        /* Content Sections */
-        .content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 60px; }
-        .content-text h2 { font-size: 32px; margin-bottom: 20px; color: var(--primary-color); }
-        .content-text p { margin-bottom: 20px; color: var(--text-dark); }
+        /* Main Banner */
+        .main-banner { margin-bottom: 60px; }
+        .main-banner img { width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 
-        /* Case Studies */
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .project-card { background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: var(--transition); }
-        .project-card:hover { transform: translateY(-5px); }
-        .project-info { padding: 20px; }
+        /* Content Section */
+        .intro-text { text-align: center; max-width: 900px; margin: 0 auto 60px; }
+        .intro-text h2 { font-size: 36px; color: var(--primary-color); margin-bottom: 20px; }
+        .intro-text p { font-size: 18px; color: var(--text-light); }
 
-        /* Material Table */
-        table { width: 100%; border-collapse: collapse; margin: 40px 0; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #edf2f7; }
-        th { background: var(--primary-color); color: var(--white); }
+        /* Type Grid */
+        .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 80px; }
+        .type-card { position: relative; border-radius: 15px; overflow: hidden; height: 400px; display: flex; align-items: flex-end; color: white; transition: var(--transition); }
+        .type-card:hover { transform: translateY(-10px); }
+        .type-card img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+        .type-card::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.7)); z-index: -1; }
+        .type-info { padding: 40px; }
+        .type-info h3 { font-size: 28px; margin-bottom: 10px; }
+        .type-info p { opacity: 0.9; margin-bottom: 20px; }
+
+        /* Installation Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .gallery-item { border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .gallery-item img { transition: var(--transition); }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Technical Table */
+        .table-container { margin-top: 60px; background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 20px; text-align: left; border-bottom: 1px solid #edf2f7; }
+        th { background: var(--primary-color); color: var(--white); font-weight: 700; }
         tr:hover { background: #f8fafc; }
+        .stars { color: #f6ad55; }
 
-        /* Features */
-        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
-        .feature-card { text-align: center; padding: 30px; background: var(--bg-light); border-radius: 10px; }
-        .feature-card i { font-size: 32px; color: var(--accent-color); margin-bottom: 15px; }
+        /* USP Section */
+        .usp-section { background: var(--primary-color); color: var(--white); border-radius: 20px; padding: 60px; margin-top: 80px; display: flex; align-items: center; gap: 50px; }
+        .usp-content { flex: 1; }
+        .usp-content h2 { font-size: 32px; margin-bottom: 20px; }
+        .usp-content ul li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+        .usp-image { flex: 1; border-radius: 15px; overflow: hidden; }
 
-        /* Inquiry Section */
-        .inquiry-section { background: var(--primary-color); color: var(--white); border-radius: 15px; padding: 50px; margin-top: 60px; }
-        form { background: var(--white); padding: 30px; border-radius: 10px; color: var(--text-dark); margin-top: 30px; }
+        /* Inquiry Form */
+        .inquiry-form { background: var(--bg-light); border-radius: 20px; padding: 50px; margin-top: 80px; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; font-weight: 600; }
-        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        input, textarea, select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; }
 
-        footer { background: #1a202c; color: var(--white); padding: 60px 0 30px; margin-top: 80px; }
+        footer { background: #1a202c; color: var(--white); padding: 60px 0 30px; margin-top: 100px; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
 
         @media (max-width: 768px) {
-            .content-grid { grid-template-columns: 1fr; }
-            .page-hero h1 { font-size: 32px; }
+            .type-grid { grid-template-columns: 1fr; }
+            .usp-section { flex-direction: column; padding: 40px; }
+            .form-grid { grid-template-columns: 1fr; }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -102,10 +116,10 @@
 
     <header>
         <div class="container">
-            <nav>
-                <a href="index.html" class="logo">
+            <nav style="display: flex; justify-content: space-between; align-items: center; height: 80px;">
+                <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 800; color: #1a365d;">
                     <img src="https://sc01.alicdn.com/kf/Hff205b890a8c4a2bb574b3ffaa00cbc3O.png" alt="Damannets Logo" style="height: 50px;">
-                    <span style="color: #1a365d;">Damannets</span>
+                    <span>Damannets</span>
                 </a>
                 <ul style="display: flex; gap: 30px;">
                     <li><a href="index.html#home">Home</a></li>
@@ -116,167 +130,179 @@
         </div>
     </header>
 
+    <div class="container">
+        <div class="breadcrumbs">
+            <a href="index.html">Home</a><span>/</span>Outdoor Nets
+        </div>
+    </div>
+
     <section class="page-hero">
         <div class="container">
             <h1>Outdoor Nets</h1>
-            <p>Custom Outdoor Nets: Safety, Relaxation, and Aesthetics. Transform your gardens, terraces, and pools into unique, secure living areas.</p>
         </div>
     </section>
 
-    <section class="section-padding">
-        <div class="container">
-            <div class="content-grid">
-                <div class="content-text">
-                    <h2>Enhance Your Outdoor Living</h2>
-                    <p>Enhance your outdoor spaces by securing terraces, creating suspended relaxation areas, or transforming empty spaces into living areas. Damannets custom residential nets combine design, durability, and comfort.</p>
-                    <p>Our UV- and weather-resistant nets for terraces, balconies, swimming pools or overhead areas turn your outdoor spaces into secure, original relaxation areas.</p>
-                    <a href="#quote" class="btn btn-primary">Get a Quote in 3 Hours</a>
-                </div>
-                <div>
-                    <img src="https://feelnets.com/wp-content/uploads/2024/09/filet-garde-corps-cordage-noir-uai-2048x877.jpeg" alt="Outdoor Guardrail Net">
+    <div class="container">
+        <div class="main-banner">
+            <img src="https://feelnets.com/wp-content/uploads/2025/10/feelnets-filets-exterieur-banniere.webp" alt="Outdoor Net Installation">
+        </div>
+
+        <div class="intro-text">
+            <h2>Custom Outdoor Nets: Safety, Relaxation, and Aesthetics</h2>
+            <p>Damannets designs custom residential nets for your exterior spaces. Our UV-treated, weather-resistant nets for terraces, balconies, swimming pools, or overhead areas turn your outdoor spaces into secure, original relaxation areas that can support up to 200 kg/m².</p>
+        </div>
+
+        <div class="type-grid">
+            <div class="type-card">
+                <img src="https://feelnets.com/wp-content/uploads/2024/09/filet-garde-corps-cordage-noir-uai-2048x877.jpeg" alt="Safety Guardrails">
+                <div class="type-info">
+                    <h3>Guardrail, safety and anti-fall nets</h3>
+                    <p>Modern protection for stairs, terraces, and balconies.</p>
+                    <a href="safety-guardrails.html" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-certificate"></i>
-                    <h3>Certified Quality</h3>
-                    <p>Nets support up to 200 kg/m² and meet strict safety standards.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-sun"></i>
-                    <h3>UV Protection</h3>
-                    <p>Specially treated Polyester and Polyamide for long-lasting sun resistance.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-globe"></i>
-                    <h3>Global Delivery</h3>
-                    <p>Direct shipping from factory to your project site worldwide.</p>
+            <div class="type-card">
+                <img src="https://feelnets.com/wp-content/uploads/2025/07/compresse-uai-1224x816.png" alt="Garden and Pool Nets">
+                <div class="type-info">
+                    <h3>Outdoor Nets for Garden, Terrace, Pool</h3>
+                    <p>Transform empty voids into giant hammocks or secure pool areas.</p>
+                    <a href="#inquiry" class="btn btn-primary">Request a Quote</a>
                 </div>
             </div>
+        </div>
 
-            <div class="section-padding">
-                <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary-color);">Our Outdoor Net Installations</h2>
-                <div class="project-grid">
-                    <div class="project-card">
-                        <img src="https://feelnets.com/wp-content/uploads/2021/10/terrasse-hotel-filet-piscine-uai-1024x438.jpg" alt="Hotel Terrace Net">
-                        <div class="project-info">
-                            <h3>Luxury Hotel Terraces</h3>
-                            <p>Stunning terrace installations for hotels like Hilton Bora Bora.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://feelnets.com/wp-content/uploads/2026/01/pergolas-Plan-large-Sunbed-1-uai-1020x680.jpg" alt="Pergola Sunbed Net">
-                        <div class="project-info">
-                            <h3>Private Villas & Pergolas</h3>
-                            <p>Creating suspended sunbeds for ultimate relaxation.</p>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="https://feelnets.com/wp-content/uploads/2025/07/compresse-uai-1224x816.png" alt="Custom Agricultural Nets">
-                        <div class="project-info">
-                            <h3>Agricultural & Professional</h3>
-                            <p>Custom-made solutions for stables and industrial needs.</p>
-                        </div>
-                    </div>
-                </div>
+        <h2 style="text-align: center; margin-bottom: 40px; color: #1a365d;">Our Outdoor Net Installations</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://feelnets.com/wp-content/uploads/2025/10/net-bungalow-hotel-maldives.webp" alt="Maldives Sunbed Net">
+                <p style="padding: 15px; font-weight: 600;">Overwater Villa Sunbeds - Maldives</p>
             </div>
+            <div class="gallery-item">
+                <img src="https://feelnets.com/wp-content/uploads/2025/10/net-terrace-luxury-hotel.webp" alt="Luxury Hotel Terrace">
+                <p style="padding: 15px; font-weight: 600;">Suspended Relaxation Deck - South Africa</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://feelnets.com/wp-content/uploads/2026/01/pergolas-Plan-large-Sunbed-1-uai-1020x680.jpg" alt="Pergola Net">
+                <p style="padding: 15px; font-weight: 600;">Luxury Sunbed for Pergolas & Gardens</p>
+            </div>
+        </div>
 
-            <h2>Material Specifications Comparison</h2>
+        <div class="usp-section">
+            <div class="usp-content">
+                <h2>Resistant and Durable Materials</h2>
+                <p style="margin-bottom: 20px; opacity: 0.9;">Our nets are made of high-strength UV-treated polyester or polyamide, ensuring extreme durability in all weather conditions.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Supports up to 200 kg/m²</li>
+                    <li><i class="fas fa-sun"></i> High UV Resistance (250 kly)</li>
+                    <li><i class="fas fa-cloud-rain"></i> Weather & Humidity Resistant</li>
+                    <li><i class="fas fa-certificate"></i> Certified Safety Standards</li>
+                </ul>
+            </div>
+            <div class="usp-image">
+                <img src="https://feelnets.com/wp-content/uploads/2023/10/photo-garde-corps-escalier-esthetique-uai-768x512.jpeg" alt="Technical Netting">
+            </div>
+        </div>
+
+        <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Net type</th>
+                        <th>Net Type</th>
                         <th>Resistance</th>
-                        <th>Relaxation rate</th>
+                        <th>Relaxation</th>
                         <th>Durability</th>
-                        <th>UV resistance</th>
+                        <th>UV Res.</th>
                         <th>Comfort</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Polyester mesh 30x30mm</td>
-                        <td>★★★★★</td>
-                        <td>★★★★☆</td>
-                        <td>★★★★★</td>
-                        <td>★★★★★</td>
-                        <td>★★★★☆</td>
+                        <td><strong>Polyester 30x30mm</strong></td>
+                        <td class="stars">★★★★★</td>
+                        <td class="stars">★★★★☆</td>
+                        <td class="stars">★★★★★</td>
+                        <td class="stars">★★★★★</td>
+                        <td class="stars">★★★★☆</td>
                     </tr>
                     <tr>
-                        <td>Polyester mesh 13x13mm</td>
-                        <td>★★★★★</td>
-                        <td>★★★★☆</td>
-                        <td>★★★★★</td>
-                        <td>★★★★★</td>
-                        <td>★★★★★</td>
+                        <td><strong>Polyester 13x13mm</strong></td>
+                        <td class="stars">★★★★★</td>
+                        <td class="stars">★★★★☆</td>
+                        <td class="stars">★★★★★</td>
+                        <td class="stars">★★★★★</td>
+                        <td class="stars">★★★★★</td>
                     </tr>
                     <tr>
-                        <td>Polyamide mesh 30x30mm</td>
-                        <td>★★★★☆</td>
-                        <td>★★★☆☆</td>
-                        <td>★★★☆☆</td>
-                        <td>★★★★☆</td>
-                        <td>★★★★☆</td>
-                    </tr>
-                    <tr>
-                        <td>Polyamide mesh 45x45mm</td>
-                        <td>★★★★☆</td>
-                        <td>★★★☆☆</td>
-                        <td>★★★☆☆</td>
-                        <td>★★★★☆</td>
-                        <td>★★★☆☆</td>
+                        <td><strong>Polyamide 30x30mm</strong></td>
+                        <td class="stars">★★★★☆</td>
+                        <td class="stars">★★★☆☆</td>
+                        <td class="stars">★★★☆☆</td>
+                        <td class="stars">★★★★☆</td>
+                        <td class="stars">★★★★☆</td>
                     </tr>
                 </tbody>
             </table>
+        </div>
 
-            <div id="quote" class="inquiry-section">
-                <h2 style="text-align: center; font-size: 32px;">Request Your Outdoor Quote</h2>
-                <p style="text-align: center; opacity: 0.9;">Global shipping to USA, UK, Europe, and beyond. Experts respond within 3 hours.</p>
-                <form>
+        <div id="inquiry" class="inquiry-form">
+            <h2 style="text-align: center; margin-bottom: 30px; color: #1a365d;">Get Your Custom Quote Today</h2>
+            <form>
+                <div class="form-grid">
                     <div class="form-group">
-                        <label>Name</label>
+                        <label>Contact Name</label>
                         <input type="text" placeholder="Your Name">
                     </div>
                     <div class="form-group">
-                        <label>Email Address</label>
+                        <label>Business Email</label>
                         <input type="email" placeholder="email@company.com">
                     </div>
                     <div class="form-group">
-                        <label>Application</label>
+                        <label>Net Type</label>
                         <select>
-                            <option>Terrace / Balcony</option>
-                            <option>Garden / Pergola</option>
-                            <option>Swimming Pool</option>
-                            <option>Agricultural / Hay Nets</option>
-                            <option>Other Professional Use</option>
+                            <option>Terrace Net</option>
+                            <option>Garden/Pergola Net</option>
+                            <option>Pool Safety Net</option>
+                            <option>Guardrail Net</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Project Dimensions & Details</label>
-                        <textarea rows="4" placeholder="Dimensions (LxW), frame type, and any specific requirements..."></textarea>
+                        <label>Dimensions (Optional)</label>
+                        <input type="text" placeholder="e.g., 3m x 4m">
                     </div>
-                    <button type="button" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
-                </form>
-            </div>
+                </div>
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea rows="4" placeholder="Tell us about your installation needs..."></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" style="width: 100%; font-size: 18px;">Send Inquiry - Response in < 3 Hours</button>
+            </form>
         </div>
-    </section>
+    </div>
 
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <div class="logo" style="color: white; margin-bottom: 20px;">Damannets</div>
-                    <p style="opacity: 0.7;">The global partner for certified outdoor netting and architectural solutions.</p>
+                    <h3 style="margin-bottom: 20px;">Damannets Co.,Ltd</h3>
+                    <p style="opacity: 0.7;">Professional one-stop supplier for architectural and safety netting solutions worldwide.</p>
                 </div>
                 <div>
-                    <h4>Quick Contact</h4>
-                    <p style="opacity: 0.7;">Email: lansur007@163.com</p>
-                    <p style="opacity: 0.7;">Phone: +86 15931067406</p>
+                    <h4>Contact Us</h4>
+                    <p style="opacity: 0.7; margin-top: 10px; margin-bottom: 10px;">Email: lansur007@163.com</p>
+                    <p style="opacity: 0.7; margin-bottom: 10px;">WhatsApp: +86 15931067406</p>
+                    <p style="opacity: 0.7;">Add: Lizhuang Industrial Area, Binzhou City, Shandong, China (256600)</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div style="display: flex; gap: 15px; margin-top: 10px;">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; text-align: center; margin-top: 30px; opacity: 0.5;">
-                <p>&copy; 2026 Damannets Co.,Ltd. All Rights Reserved.</p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 30px; text-align: center; opacity: 0.5; font-size: 14px;">
+                &copy; 2026 Damannets Co.,Ltd. All Rights Reserved.
             </div>
         </div>
     </footer>
